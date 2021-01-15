@@ -1,26 +1,24 @@
-import styled from "styled-components";
-
-const Container = styled.div`
-padding: 12px 64px;`
+import styled from 'styled-components';
+import { TabBodyContainer } from "./tab-body-container";
 
 const ListItem = styled.div`
-padding 8px 16px;
-
-&:nth-child(n+2) {
+  padding: 8px 16px;
+  
+  &:nth-child(n+2) {
     border-top: 1px solid #D9DBDE;
-}
+  }
 `
 
 export const List = ({ langs }) => {
-
-
-    return(
-        <Container>
+  return (
+    <TabBodyContainer title="取り扱い言語リスト">
+      <div>
         {
-            langs.map((lang, index) => {
-                return <ListItem key={index}>{ lang }</ListItem>
-            })
+          langs.map((lang, index) => {
+            return <ListItem key={index}>{ lang }</ListItem>
+          })
         }
-        </Container>
-    )
+      </div>
+    </TabBodyContainer>
+  )
 }

@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { Button } from './button';
 import styled from 'styled-components';
+import { TabBodyContainer } from "./tab-body-container";
 
-const Container = styled.div`
-padding: 12px 60px;
-`
+
 
 const Label = styled.label`
   display: flex;
@@ -35,8 +34,7 @@ const submitForm = (event) => {
     onAddLang(text);
 }
     return(
-        <Container>
-           <h4>new lang</h4> 
+        <TabBodyContainer title="新しい言語の追加">
            <form onSubmit={submitForm}>
                <div>
                    <Label>言語</Label>
@@ -50,6 +48,6 @@ const submitForm = (event) => {
                    <FormButton>add</FormButton>
                </ButtonContainer>
            </form>
-        </Container>
+        </TabBodyContainer>
     )
 }
