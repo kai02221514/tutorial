@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import styled from "styled-components";
 import { Button } from "./Button";
-import { ThemeContext } from "./ThemeContext";
+import { ThemeContext } from "./contexts/ThemeContext";
 
 const Container = styled.header`
 display: flex;

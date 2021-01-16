@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import styled from "styled-components";
 import { Button } from "./Button";
 import { Modal } from "./Modal";
-import { THEMES,ThemeContext } from "./ThemeContext";
+import { THEMES,ThemeContext } from "./contexts/ThemeContext";
 
 const Container = styled.div`
 width: 240px;

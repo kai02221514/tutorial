@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState, useEffect,useContext } from 'react';
-import { ThemeContext } from "./ThemeContext";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 const LoadDiv = styled.div`
 height: 100%;
