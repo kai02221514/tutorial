@@ -4,6 +4,7 @@ import { List } from "./Components/List"
 import { Form } from "./Components/Form"
 import { getLanguages } from "./Components/lang"
 import { withLoading } from "./Components/with-loading";
+import { Modal } from "./Components/modal";
 
 const Header = styled.header`
 display: flex;
