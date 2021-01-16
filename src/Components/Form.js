@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Button } from './button';
+import { Button } from './Button';
 import styled from 'styled-components';
-import { TabBodyContainer } from "./Tab.body.container";
+import { TabBodyContainer } from "./Tab.Body.Container";
 import { FormModal } from './FormModal';
 import { Hint } from './Hint';
 

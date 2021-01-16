@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import styled from "styled-components";
-import { Button } from "./button";
-import { Modal } from "./modal";
+import { Button } from "./Button";
+import { Modal } from "./Modal";
 import { THEMES,ThemeContext } from "./ThemeContext";
 
 const Container = styled.div`

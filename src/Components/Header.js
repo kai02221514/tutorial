@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import styled from "styled-components";
-import { Button } from "./button";
+import { Button } from "./Button";
 import { ThemeContext } from "./ThemeContext";
 
 const Container = styled.header`
@@ -28,7 +28,7 @@ const HeaderButton = styled(Button)`
 `
 
 export const Header = ({ tab, setTab }) => {
-  const [theme, toggleTheme] = useContext(ThemeContext);
+  const [theme,toggleTheme] = useContext(ThemeContext);
     return(
  <Container>
     <HeaderUl>

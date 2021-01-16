@@ -1,8 +1,7 @@
-
 import { useState } from 'react';
 import { ThemeContext,THEMES } from "./Components/ThemeContext";
-import { withLoading } from "./Components/with-loading";
-import { getLanguages } from "./Components/lang";
+import { withLoading } from "./Components/With.Loading";
+import { getLanguages } from "./Components/Language";
 import App from "./App"
 
 const AppComponent = withLoading(App, getLanguages)
