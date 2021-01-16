@@ -3,26 +3,27 @@ import { Button } from './button';
 import styled from 'styled-components';
 import { TabBodyContainer } from "./tab-body-container";
 import { FormModal } from './FormModal';
+import { Hint } from './Hint';
 
 const Label = styled.label`
-  display: flex;
-  color: #757575;
-  font-size: 14px;
-  font-weight: bold;
-  `
+display: flex;
+color: #757575;
+font-size: 14px;
+font-weight: bold;
+`
 
-  const Input = styled.input`
-  border-radius: 3px;
-  padding: 4px 8px;
-  border: 1px solid black;
+const Input = styled.input`
+border-radius: 3px;
+padding: 4px 8px;
+border: 1px solid black;
 `
 
 const ButtonContainer = styled.div`
-  margin-top: 24px;
+margin-top: 24px;
 `
 
 const FormButton = styled(Button)`
-  width: 120px;
+width: 120px;
 `
 
 export const Form = ({ onAddLang }) => {
@@ -44,6 +45,7 @@ const submitForm = (e) => {
                    value={text} 
                    onChange={(a) => setText(a.target.value)}
                    />
+                   <Hint />
                </div>
                <ButtonContainer>
                    <FormButton>add</FormButton>
