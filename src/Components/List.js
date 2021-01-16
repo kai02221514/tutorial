@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { TabBodyContainer } from "./tab-body-container";
+import { TabBodyContainer } from "./Tab.body.container";
 
 const ListItem = styled.div`
   padding: 8px 16px;

@@ -1,34 +1,21 @@
-import styled from "styled-components";
-import { useEffect,useState } from "react";
+import { useState,useContext } from "react";
 import { List } from "./Components/List"
 import { Form } from "./Components/Form"
-import { getLanguages } from "./Components/lang"
-import { withLoading } from "./Components/with-loading";
-import { Modal } from "./Components/modal";
+import { Header } from "./Components/Header";
+import { ThemeContext } from "./Components/ThemeContext";
+import styled from "styled-components";
 
-const Header = styled.header`
-display: flex;
-justify-content: space-between;
-padding: 24px 64px 0;
-border-bottom: 1px solid #E0E0E0;
+const Container = styled.div`
+  height: 100%;
+  color: ${({ theme }) => theme.color};
+  background-color: ${({ theme }) => theme.backgroundColor};
 `
-
-const HeaderUl = styled.ul`
-display: flex;
-margin: 0;
-padding: 0;`
-
-const HeaderLi = styled.li`
-list-style: none;
-padding: 4px 12px;
-cursor: pointer;
-border-bottom: ${props => props.focused ? "2px solid #F44336" : "none"};
-`
-
 
 function App({ data }) {
-  const [tab,setTab] = useState('list');
-  const [langs,setLangs] = useState(data);
+const [tab,setTab] = useState('list');
+const [langs,setLangs] = useState(data);
+
+const [theme] = useContext(ThemeContext);
 
 const addLang = (lang) => {
   setLangs([...langs,lang]);
@@ -36,19 +23,14 @@ const addLang = (lang) => {
 }
 
   return (
-<div>
-  <Header>
-    <HeaderUl>
-      <HeaderLi focused={tab === "list"} onClick={() => setTab('list')}>list</HeaderLi>
-      <HeaderLi focused={tab === "form"} onClick={() => setTab('form')}>form</HeaderLi>
-    </HeaderUl>
-  </Header>
+<Container theme={theme}>
+ <Header tab={tab} setTab={setTab} />
   {
     tab === 'list' ? <List langs={langs}/> : <Form onAddLang={addLang}/>
   }
-</div>
+</Container>
   );
 }
 
 
-export default withLoading(App, getLanguages);
+export default App;
