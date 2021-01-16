@@ -1,5 +1,5 @@
-import ReactDOM from 'react-dom';
-import styled from 'styled-components';
+import ReactDOM from "react-dom";
+import styled from "styled-components";
 
 const modalRoot = document.getElementById('modal-root');
 

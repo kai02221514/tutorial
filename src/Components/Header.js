@@ -28,7 +28,9 @@ const HeaderButton = styled(Button)`
 `
 
 export const Header = ({ tab, setTab }) => {
-  const [theme,toggleTheme] = useContext(ThemeContext);
+
+const [theme,toggleTheme] = useContext(ThemeContext);
+
     return(
  <Container>
     <HeaderUl>

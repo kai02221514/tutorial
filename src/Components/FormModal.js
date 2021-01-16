@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext } from "react";
 import styled from "styled-components";
 import { Button } from "./Button";
 import { Modal } from "./Modal";
@@ -20,7 +20,9 @@ margin-top: 24px;
 `
 
 export const FormModal = ({ confirm, cancel }) => {
-    const [theme] = useContext(ThemeContext);
+
+const [theme] = useContext(ThemeContext);
+
     return (
         <Modal>
             <Container theme={theme}>

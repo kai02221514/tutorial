@@ -27,7 +27,9 @@ width: 120px;
 `
 
 export const Form = ({ onAddLang }) => {
+
 const [text,setText] = useState('');
+
 const [showModal, setShowModal] = useState(false);
 
 const submitForm = (e) => {
@@ -41,10 +43,7 @@ const submitForm = (e) => {
                <div>
                    <Label>言語</Label>
                    <Input 
-                   type="text" 
-                   value={text} 
-                   onChange={(a) => setText(a.target.value)}
-                   />
+                   type="text" value={text} onChange={(a) => setText(a.target.value)}/>
                    <Hint />
                </div>
                <ButtonContainer>
